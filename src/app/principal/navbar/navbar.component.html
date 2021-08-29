@@ -1,0 +1,19 @@
+
+<nav class="navbar navbar-dark bg-dark nav justify-content-end ">
+  <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link text-white "id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-inicio" aria-selected="true" [routerLink]="['/fondo']">Inicio</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link text-white " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-registro" aria-selected="false" [routerLink]="['/principal']">Registro</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link text-white " id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-listado" aria-selected="false" [routerLink]="['/list-estudiante']">Listado</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+  </div>
+  </nav>

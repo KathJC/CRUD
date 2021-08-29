@@ -1,0 +1,61 @@
+<div class="container mt-4 ">
+    <div class="col-lg-6 offset-lg-3">
+        <div class="card text-center">
+    <div class="card border-dark ">
+        <div class="card-body" >
+            <div class="text-right " >
+                <button type="button" class="btn-close " aria-label="Close"  [routerLink]="['/list-estudiante']"></button> 
+              </div>
+        <div class="col-12 py-4">
+            <h1 class="display-5" style="text-align: center;" >FORMULARIO DE REGISTRO</h1>
+          
+        </div>
+        <p></p>
+        <form class="col-12 was-validated " (ngSubmit)="enviarPos()" >
+            <div class="mb-3 row">
+                <label for="nombre" class=" col-sm-2 col-form-label p-2 text-left font-weight-bold ">Nombre:</label>
+                <div class="col-sm-8">
+                <input type="text" [(ngModel)]="usuario.nombre"  class="form-control" name="nombre" placeholder="nombre" required >
+               
+                
+                 <div class="invalid-feedback" style="text-align: left;">Por favor llenar los campos</div>
+            </div>
+            <p></p>
+        </div>
+
+            <div class="mb-3 row">
+                <label for="direccion" class="col-sm-2 col-form-label p-2 text-left font-weight-bold ">Dirección:</label>
+                <div class="col-sm-8">
+                <input type="text" [(ngModel)]="usuario.direccion" class="form-control" name="direccion"  placeholder="direccion" required >
+                <div class="invalid-feedback" style="text-align: left;">Por favor llenar los campos</div>
+            </div>
+            <p></p>
+            <p></p>
+        </div>
+            <button  class="btn btn-dark btn-lg">Enviar</button>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+
+<!--<div class="container mt-4 ">
+        <div class="col-3 mt-2" *ngFor="let u of usuarios">
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{u.nombre}}</h5>-->
+                    <!--<p class="card-text">Dirección: {{ u.direccion }}</p>-->
+                    <!-- <a href="#" class="btn btn-primary" (click)="eliminar(u.id)">Editar</a> -->
+                   <!-- <button type="button" class="btn btn-primary" (click)="editar(u.id)">Editar</button>
+                    <button type="button" class="btn btn-danger" (click)="eliminar(u.id)">Eliminar</button>-->
+                    <!-- <a href="#" class="btn btn-danger">Eliminar</a> -->
+              <!--  </div>
+            </div>
+
+        </div>-->
+
+
+
+  

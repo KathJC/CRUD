@@ -1,0 +1,44 @@
+<div class="container h-100 gradient-custom-3">
+  <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-8 mt-4">
+          <div class="card border-dark" >
+              <div class="card-body" >
+                <div class="text-right">
+                <button type="button" class="btn-close" aria-label="Close" [routerLink]="['/principal']"></button> 
+              </div>
+                  <div class="row text-center">
+                      <p></p>
+                  <span style="font-weight: bold; font-family: 'Courier New', Courier, monospace;" class="h1">LISTADO DE ESTUDIANTES</span>
+                </div>
+                  <h5 style="margin-top: 30px;" *ngIf="usuarios.length == 0">No hay datos para mostrar</h5>
+
+
+                  <table  *ngIf="usuarios.length > 0" class="table table-striped mt-5" >
+                      <thead class="thead-dark">
+                          <tr>
+                              <th scope="row"></th>
+                              <th>NOMBRE</th>
+                              <th>DIRECCIÓN</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let u of usuarios">
+                            <td scope="row"></td>
+                              <td  >{{ u.nombre }}</td>
+                              <td >{{ u.direccion }}</td>
+                              <td align="right">
+                                
+                                <i class="fas fa-user-edit fa-lg text-dark mr-4  " [routerLink]="['/principal']"></i>
+                                  <i class="fas fa-edit fa-lg text-success mr-4" [routerLink]="['/registro-estudiante/', u.id]"></i>
+                                  <i (click)="eliminar(u.id)" class="fas fa-trash-alt fa-lg text-danger mr-4" ></i>
+                                
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container mt-4 ">
+  <div class="col-lg-6 offset-lg-3">
+      <div class="card ">
+  <div class="card border-dark ">
+      <div class="card-body" >
+        <div class="text-right">
+          <button type="button" class="btn-close" aria-label="Close" [routerLink]="['/list-estudiante']"></button>
+        </div>
+      <div class="col-12 py-4">
+      
+          <h1 class="display-5" style="text-align: center;" >EDITAR ESTUDIANTE</h1>
+        
+      </div>
+      <p></p>
+      <form class="col-12 was-validated " (ngSubmit)="enviarPos()">
+          <div class="mb-3 row">
+              <label for="nombre" class=" form-label col-sm-2 col-form-label p-2 text-left font-weight-bold ">Nombre:</label>
+              <div class="col-sm-8">
+              <input type="text" [(ngModel)]="usuario.nombre"  class="form-control" name="nombre" placeholder="nombre" required>
+              <div class="invalid-feedback">Por favor llenar los campos</div>
+          </div>
+          <p></p>
+      </div>
+
+          <div class="mb-3 row  ">
+              <label for="direccion" class=" form-label col-sm-2 col-form-label p-2 text-left font-weight-bold ">Dirección:</label>
+              <div class="col-sm-8">
+              <input type="text" [(ngModel)]="usuario.direccion" class="form-control" name="direccion" placeholder="direccion" required>
+              <div class="invalid-feedback">Por favor llenar los campos</div>
+          </div>
+          <p></p>
+          <p></p>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-dark btn-lg ">Aceptar</button>
+      </div>
+         
+      </form>
+  </div>
+  </div>
+</div>
+</div>
